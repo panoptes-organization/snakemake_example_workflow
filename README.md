@@ -1,6 +1,7 @@
-# Snakemake tutorial
+## Info
 
-Small tutorial on how to install and use snakemake.
+Example workflow using snakemake
+
 
 ## Install miniconda and snakemake
 
