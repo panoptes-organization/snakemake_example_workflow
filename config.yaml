@@ -1,0 +1,9 @@
+---
+  output_dir: "results"
+  logs: "logs"
+  local_log: "logs/local_log"
+  cluster_log: "logs/cluster_log"
+  input_dir: "samples"
+  gtf: "samples/Homo_sapiens.GRCh37.85.chr14.gtf"
+  samples: ["control_rep1", "control_rep2", "HNRNPCKD_rep1", "HNRNPCKD_rep2"]
+...
