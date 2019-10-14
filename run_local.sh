@@ -8,7 +8,7 @@ mkdir -p logs/local_log
 snakemake \
 --use-conda \
 --configfile config.yaml \
--p \
 --local-cores 2 \
 --cores 2 \
---rerun-incomplete
+--rerun-incomplete \
+--wms-monitor "http://127.0.0.1:5000"
