@@ -4,7 +4,12 @@ Snakemake example workflow to test [panoptes](https://github.com/panoptes-organi
 
 # Installation
 
-Install custom snakemake in a virtual environment
+The workflow relies on conda dependencies to run, so we recommend to first install miniconda. You can find instructions here:
+
+https://docs.conda.io/en/latest/miniconda.html
+
+
+Then you need to install a custom snakemake in a virtual environment. The following instructions are based on virtualenv and pip.
 ```bash
 # clone custom snakemake
 git clone -b feature/wms-monitor https://bitbucket.org/fgypas/snakemake
