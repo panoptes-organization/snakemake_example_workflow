@@ -40,4 +40,4 @@ Run workflow
 bash run_local.sh
 ```
 
-**Note**: Make sure thata the correct IP and port via (--wms-monitor) is specified in the run_local.sh script
+**Note**: Make sure thata the correct IP and port via --wms-monitor is specified in the run_local.sh script
