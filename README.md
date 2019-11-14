@@ -1,46 +1,32 @@
-## Info
+# Info
 
-Example workflow using snakemake
+Snakemake example workflow to test [panoptes](https://github.com/panoptes-organization/panoptes)
 
+# Installation
 
-## Install miniconda and snakemake
-
-Download and install install Miniconda 3
-
-Linux users
+Install custom snakemake in a virtual environment
 ```bash
-wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash Miniconda3-latest-Linux-x86_64.sh
+# clone custom snakemake
+git clone -b feature/wms-monitor https://bitbucket.org/fgypas/snakemake
+cd snakemake
+# create a virtual environment
+virtualenv -p `which python3` venv_snakemake_develop
+# activate
+source venv_snakemake_develop/bin/activate
+# install
+pip install .
+cd ..
+# clone snakemake example workflow
+git clone https://github.com/panoptes-organization/snakemake_example_workflow.git
 ```
 
-Mac users
+# Run workflow
+
+Activate the virtual environment with snakemake (in case it's not activated)
 ```bash
-wget https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
-bash Miniconda3-latest-MacOSX-x86_64.sh
-```
-
-Create a virtual environment with snakemake
-```bash
-conda create -n snakemake_example_workflow -c bioconda -c conda-forge snakemake=5.4.5
-```
-
-## Run workflow
-
-Clone the repository
-```bash
-git clone https://github.com/fgypas/snakemake_example_workflow.git
-```
-
-and then go to the directory snakemake_example_workflow
-
-```bash
-cd snakemake_example_workflow
-```
-
-Activate the virtual environment
-
-```bash
-conda activate snakemake_example_workflow
+cd snakemake
+source venv_snakemake_develop/bin/activate
+cd ../snakemake_example_workflow
 ```
 
 Create the dag
@@ -53,3 +39,5 @@ Run workflow
 ```bash
 bash run_local.sh
 ```
+
+**Note**: Make sure thata the correct IP and port via (--wms-monitor) is specified in the run_local.sh script
