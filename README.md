@@ -12,7 +12,7 @@ https://docs.conda.io/en/latest/miniconda.html
 Then you need to install a custom snakemake in a virtual environment. The following instructions are based on virtualenv and pip.
 ```bash
 # clone custom snakemake
-git clone -b feature/wms-monitor https://bitbucket.org/fgypas/snakemake
+git clone -b features/wms-monitor https://github.com/panoptes-organization/snakemake
 cd snakemake
 # create a virtual environment
 virtualenv -p `which python3` venv_snakemake_develop
@@ -45,4 +45,4 @@ Run workflow
 bash run_local.sh
 ```
 
-**Note**: Make sure thata the correct IP and port via --wms-monitor is specified in the run_local.sh script
+**Note**: Make sure that the correct IP and port via --wms-monitor is specified in the run_local.sh script
