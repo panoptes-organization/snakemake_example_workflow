@@ -11,8 +11,8 @@ https://docs.conda.io/en/latest/miniconda.html
 
 Then you need to install a custom snakemake in a virtual environment. The following instructions are based on virtualenv and pip.
 ```bash
-# clone custom snakemake
-git clone -b features/wms-monitor https://github.com/panoptes-organization/snakemake
+# clone snakemake
+git clone https://github.com/panoptes-organization/snakemake
 cd snakemake
 # create a virtual environment
 virtualenv -p `which python3` venv_snakemake_develop
@@ -27,11 +27,10 @@ git clone https://github.com/panoptes-organization/snakemake_example_workflow.gi
 
 # Run workflow
 
-Activate the virtual environment with snakemake (in case it's not activated)
+Activate the virtual environment with snakemake (in case it's not activated) and enter the snakemake example workflow directory
 ```bash
-cd snakemake
-source venv_snakemake_develop/bin/activate
-cd ../snakemake_example_workflow
+source snakemake/venv_snakemake_develop/bin/activate # run this if the virtual environment is not active
+cd snakemake_example_workflow
 ```
 
 Create the dag
