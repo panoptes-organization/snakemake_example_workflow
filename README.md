@@ -12,7 +12,7 @@ https://docs.conda.io/en/latest/miniconda.html
 Then you need to install a custom snakemake in a virtual environment. The following instructions are based on virtualenv and pip.
 ```bash
 # clone snakemake
-git clone https://github.com/panoptes-organization/snakemake
+git clone https://github.com/snakemake/snakemake
 cd snakemake
 # create a virtual environment
 virtualenv -p `which python3` venv_snakemake_develop
