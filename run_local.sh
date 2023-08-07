@@ -6,6 +6,7 @@ mkdir -p logs/cluster_log
 mkdir -p logs/local_log
 
 snakemake \
+--snakefile Snakefile \
 --use-conda \
 --configfile config.yaml \
 --local-cores 2 \
