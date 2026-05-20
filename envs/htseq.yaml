@@ -3,5 +3,5 @@ channels:
   - conda-forge
   - bioconda
 dependencies:
-  - htseq=0.11.2
+  - htseq=2.0.5
 ...

@@ -1,4 +1,4 @@
-#!/urs/bin/bash
+#!/usr/bin/env bash
 
 set -e
 
@@ -12,4 +12,5 @@ snakemake \
 --local-cores 2 \
 --cores 2 \
 --rerun-incomplete \
---wms-monitor "http://127.0.0.1:5000"
+--logger panoptes \
+--logger-panoptes-address "http://127.0.0.1:5000"
