@@ -1,0 +1,32 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Snakemake 9
+        run: pip install 'snakemake>=9'
+
+      - name: Dry-run the workflow (Snakefile + DAG resolve)
+        run: |
+          snakemake \
+            --snakefile Snakefile \
+            --configfile config.yaml \
+            --cores 1 \
+            -n
+
+      - name: Lint the Snakefile
+        run: |
+          snakemake \
+            --snakefile Snakefile \
+            --configfile config.yaml \
+            --lint

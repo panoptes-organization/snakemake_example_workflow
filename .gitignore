@@ -1,5 +1,6 @@
 .*
 !.gitignore
+!.github
 results
 logs
 dag.png

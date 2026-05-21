@@ -64,6 +64,8 @@ rule merge_results:
         counts=expand(os.path.join(config["output_dir"], "{sample}.htseq.tsv"), sample=config["samples"])
     output:
         counts=os.path.join(config["output_dir"], "counts.htseq.merged.tsv")
+    conda:
+        "envs/coreutils.yaml"
     threads:    1
     log:
         os.path.join(config["local_log"], "merge_results.log")
