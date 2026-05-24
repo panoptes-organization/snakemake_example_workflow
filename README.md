@@ -33,13 +33,9 @@ Install Snakemake 9 and the panoptes logger plugin. With conda (recommended,
 since the example workflow rules use conda envs anyway):
 
 ```bash
-conda create -n panoptes-example -c conda-forge -c bioconda 'snakemake>=9'
+conda create -n panoptes-example -c conda-forge -c bioconda 'snakemake>=9' snakemake-logger-plugin-panoptes
 conda activate panoptes-example
-pip install snakemake-logger-plugin-panoptes
 ```
-
-> A bioconda recipe for `snakemake-logger-plugin-panoptes` is on the way;
-> once it lands you can install it via conda instead of pip.
 
 Or with pip in a virtual environment:
 
